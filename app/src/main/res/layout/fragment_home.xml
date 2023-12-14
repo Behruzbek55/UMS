@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UMS"
+        android:textStyle="bold"
+        android:textColor="#ED0E0E"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toTopOf="@id/line_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/line_tarif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/line_internet"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/line_Daqiqalar"
+        app:layout_constraintTop_toBottomOf="@id/line_1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tariflat"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_Daqiqalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/line_xizmatlar"
+        app:layout_constraintLeft_toRightOf="@id/line_tarif"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daqiqalar"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/line_sms"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/line_xizmatlar"
+        app:layout_constraintTop_toBottomOf="@id/line_tarif">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/internet"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_xizmatlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/line_yangiliklar"
+        app:layout_constraintLeft_toRightOf="@id/line_internet"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_Daqiqalar">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/xizmatlar"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/line_yangiliklar"
+        app:layout_constraintTop_toBottomOf="@id/line_internet">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sms"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_yangiliklar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/line_sms"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_xizmatlar">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rasm6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yangiliklar"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
